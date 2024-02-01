@@ -1,0 +1,14 @@
+@mixin fonts {
+    font-family: "Gentium Plus", var(--base-font-family);
+    [dir="rtl"] & {
+        font-family: "Amiri", var(--base-font-family);
+    }
+}
+
+body {
+    @include fonts
+}
+
+.article-content {
+    @include fonts
+}
