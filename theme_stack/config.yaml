@@ -1,0 +1,255 @@
+baseurl: https://eis1600.github.io
+languageCode: en-us
+theme: "hugo-theme-stack"
+paginate: 5
+title: Evolution of Islamic Societies (c. 600-1600)
+
+staticDir:
+  - static_files
+  - static_files/headers
+  - static_files/logos
+  - static_files/wp
+
+languages:
+    en:
+        languageName: English
+        title: "The Evolution of Islamic Societies (c. 600-1600 CE)"
+        weight: 1
+        staticDir2: static_files/_EN
+        params:
+            description: "Emmy Noether Junior Research Group • DFG • Universität Hamburg • Team: Alicia Gonzalez Martinez, CS PostDoc Researcher • Hamid Reza Hakimi, PhD Researcher • Lisa Mischer, PhD Researcher • Maxim Romanov, PI" 
+            footer:
+                text: "“The Evolution of Islamic Societies (c.600-1600 CE): Algorithmic Analysis into Social History” • Emmy Noether Junior Research Group • DFG • Universität Hamburg, Afrika-Asien Institut • Team:  Alicia Gonzalez Martinez, CS PostDoc Researcher • Hamid Reza Hakimi, PhD Researcher • Lisa Mischer, PhD Researcher • Maxim Romanov, PI<br>"
+            sidebar:
+                emoji: ~
+                avatar:
+                    enabled: true
+                    local: true
+                    src: img/eis1600_SMALL_mix_blue_white.png
+
+# Change it to your Disqus shortname before using
+disqusShortname:
+
+# GA Tracking ID
+googleAnalytics:
+
+# Theme i18n support
+# Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
+DefaultContentLanguage: en
+
+# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
+# This will make .Summary and .WordCount behave correctly for CJK languages.
+hasCJKLanguage: false
+
+permalinks:
+    post: /p/:slug/
+    page: /:slug/
+
+params:
+    mainSections:
+        - post
+    featuredImageField: image
+    rssFullContent: true
+    favicon:  # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+
+    footer:
+        since: 2022
+
+    dateFormat:
+        published:
+        lastUpdated: January 02, 2020
+
+    sidebar:
+        emoji: false
+        subtitle: "Emmy Noether Junior Research Group • DFG • Universität Hamburg, Afrika-Asien Institut • Team: Hamid Reza Hakimi, PhD Researcher • Lisa Mischer, PhD Researcher • Alicia Gonzalez Martinez, CS PostDoc Researcher • Maxim Romanov, PI"
+        avatar:
+            enabled: true
+            local: true
+            src: img/eis1600_SMALL_mix_blue_white.png
+
+    article:
+        math: false
+        toc: true
+        readingTime: true
+        license:
+            enabled: false
+            default: Licensed under CC BY-NC-SA 4.0
+
+    comments:
+        enabled: true
+        provider: disqus
+
+        disqusjs:
+            shortname:
+            apiUrl:
+            apiKey:
+            admin:
+            adminLabel:
+
+        utterances:
+            repo:
+            issueTerm: pathname
+            label:
+
+        remark42:
+            host:
+            site:
+            locale:
+
+        vssue:
+            platform:
+            owner:
+            repo:
+            clientId:
+            clientSecret:
+            autoCreateIssue: false
+
+        # Waline client configuration see: https://waline.js.org/en/reference/component.html
+        waline:
+            serverURL:
+            lang:
+            pageview:
+            emoji:
+                - https://unpkg.com/@waline/emojis@1.0.1/weibo
+            requiredMeta:
+                - name
+                - email
+                - url
+            locale:
+                admin: Admin
+                placeholder:
+
+        twikoo:
+            envId:
+            region:
+            path:
+            lang:
+
+        # See https://cactus.chat/docs/reference/web-client/#configuration for description of the various options
+        cactus:
+            defaultHomeserverUrl:
+            serverName:
+            siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
+
+        giscus:
+            repo:
+            repoID:
+            category:
+            categoryID:
+            mapping:
+            lightTheme:
+            darkTheme:
+            reactionsEnabled: 1
+            emitMetadata: 0
+
+        gitalk:
+            owner:
+            admin:
+            repo:
+            clientID:
+            clientSecret:
+
+        cusdis:
+            host:
+            id:
+    widgets:
+        homepage:
+            - type: search
+            - type: archives
+              params:
+                  limit: 5
+            - type: categories
+              params:
+                  limit: 10
+            - type: tag-cloud
+              params:
+                  limit: 10
+        page:
+            - type: toc
+
+    opengraph:
+        twitter:
+            # Your Twitter username
+            site:
+
+            # Available values: summary, summary_large_image
+            card: summary_large_image
+
+    defaultImage:
+        opengraph:
+            enabled: false
+            local: false
+            src:
+
+    colorScheme:
+        # Display toggle
+        toggle: true
+
+        # Available values: auto, light, dark
+        default: auto
+
+    imageProcessing:
+        cover:
+            enabled: true
+        content:
+            enabled: true
+
+### Custom menu
+### See https://docs.stack.jimmycai.com/configuration/custom-menu.html
+### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
+menu:
+    main: []
+
+    social:
+        - identifier: github
+          name: GitHub
+          url: https://github.com/EIS1600/
+          params:
+              icon: brand-github
+
+        - identifier: instagram
+          name: Instagram
+          url: https://www.instagram.com/eis1600project/
+          params:
+              icon: brand-instagram
+
+        - identifier: twitter
+          name: Twitter
+          url: https://twitter.com/eis1600project
+          params:
+              icon: brand-twitter
+
+        - identifier: facebook
+          name: Facebook
+          url: https://www.facebook.com/people/EIS1600Project/100087679731197/
+          params:
+              icon: brand-facebook
+
+related:
+    includeNewer: true
+    threshold: 60
+    toLower: false
+    indices:
+        - name: tags
+          weight: 100
+
+        - name: categories
+          weight: 200
+
+markup:
+    goldmark:
+        renderer:
+            ## Set to true if you have HTML content inside Markdown
+            unsafe: false
+    tableOfContents:
+        endLevel: 4
+        ordered: true
+        startLevel: 2
+    highlight:
+        noClasses: false
+        codeFences: true
+        guessSyntax: true
+        lineNoStart: 1
+        lineNos: true
+        lineNumbersInTable: true
+        tabWidth: 4
